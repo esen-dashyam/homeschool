@@ -9,7 +9,7 @@ import {
   LayoutDashboard, CalendarDays, BookOpen, GraduationCap,
   FileText, Utensils, ShoppingCart, Star, CheckSquare,
   Settings, Bell, ChevronLeft, ChevronRight, Menu, X,
-  FolderOpen, LayoutGrid, NotebookPen, MessageSquare, Users
+  FolderOpen, LayoutGrid, NotebookPen, MessageSquare, Users, AlertCircle
 } from "lucide-react";
 import { mockPods } from "@/lib/mockData";
 
@@ -39,6 +39,7 @@ const navSections = [
   {
     label: "System",
     items: [
+      { href: "/problems", label: "Parent Problems", icon: AlertCircle },
       { href: "/settings", label: "Settings", icon: Settings },
     ],
   },
@@ -59,6 +60,7 @@ const PAGE_TITLES: Record<string, string> = {
   "/chat": "Family Chat",
   "/tasks": "Task Board",
   "/docs": "Documents",
+  "/problems": "Parent Problems",
   "/settings": "Settings",
   "/pods": "Pods",
   ...Object.fromEntries(mockPods.map(p => [`/pods/${p.id}`, p.name])),
